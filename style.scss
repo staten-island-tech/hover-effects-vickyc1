@@ -1,14 +1,69 @@
 @import "_variables.scss";
 @import "_btn.scss";
 
-.container{
-    width: 80vw;
-    margin: 2rem auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 1rem;
-    font-size: 1.5rem;
-    align-items: center;
-    text-align: center;
+.container {
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 1rem;
+  font-size: 1.5rem;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  padding: 0 12rem;
+}
+
+/* ideas= 
+need 5 effects
+flying bird
+shifting from pictures? in a diff. slideshow
+writing fancy texts
+*/
+
+.container-top-title {
+  font-size: 4rem;
+  color: #fff;
+  font-family: "Great Vibes", Helvetica, sans-serif;
+  letter-spacing: 0.5rem;
+  font-weight: bold;
+  animation: 3s slide 0s forwards;
+  transform: translateX(-100%);
+}
+@keyframes slide {
+  to {
+    transform: translateX(0);
+  }
+}
+
+.container-top img {
+  width: 100vw;
+  object-fit: cover;
+  height: 300px;
+}
+
+.text {
+  margin: 2rem;
+  font-size: 1.8rem;
+}
+
+.example-header {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+.pictures {
+  display: flex;
+}
+
+.picture.one {
+  background-image: url(img/seal.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 1.2rem;
+  height: 40rem;
+}
+
+p {
+  font-size: 1.8rem;
 }

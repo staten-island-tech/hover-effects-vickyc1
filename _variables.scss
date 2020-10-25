@@ -1,1 +1,19 @@
-@import "_style.scss";
+html,
+body {
+  font-size: 62.5%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #5a94c0;
+}
+
+$colors: (
+  red: #ff5722,
+  white: #fff,
+  blue: #00b0ff,
+  black: #000,
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
