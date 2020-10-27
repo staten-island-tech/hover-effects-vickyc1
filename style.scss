@@ -1,6 +1,10 @@
 @import "_variables.scss";
 @import "_btn.scss";
+@import "_slideshow.scss";
 
+* {
+  border: 1px solid red;
+}
 .container {
   margin: 2rem auto;
   display: flex;
@@ -17,8 +21,8 @@
 /* ideas= 
 need 5 effects
 flying bird
-shifting from pictures? in a diff. slideshow
-writing fancy texts
+shifting from pictures? in a diff. slideshow yes
+writing fancy texts yes
 */
 
 .container-top-title {
@@ -36,32 +40,46 @@ writing fancy texts
   }
 }
 
-.container-top img {
-  width: 100vw;
-  object-fit: cover;
-  height: 300px;
-}
-
-.text {
-  margin: 2rem;
-  font-size: 1.8rem;
-}
-
 .example-header {
   font-size: 2.5rem;
   text-transform: uppercase;
+  margin: 1rem 0;
 }
 
 .pictures {
   display: flex;
 }
 
-.picture.one {
-  background-image: url(img/seal.jpg);
+.picture {
   background-repeat: no-repeat;
   background-size: cover;
   font-size: 1.2rem;
   height: 40rem;
+  margin: 1rem;
+  padding: 1rem 2rem;
+  filter: brightness(100%);
+}
+
+.picture:hover {
+  filter: brightness(70%);
+  transition: all 1s ease;
+}
+
+.picture:hover {
+  filter: brightness(70%);
+  transition: all 1s ease;
+}
+
+.picture:hover . .picture.one {
+  background-image: url(img/seal.jpg);
+}
+
+.picture.two {
+  background-image: url(img/jellyfish.jpg);
+}
+
+.picture.three {
+  background-image: url(img/clown-fish.jpg);
 }
 
 p {

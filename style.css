@@ -4,7 +4,7 @@ body {
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   background-color: #5a94c0;
 }
 
@@ -14,7 +14,7 @@ body {
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   background-color: #5a94c0;
 }
 
@@ -56,6 +56,68 @@ body {
     z-index: -1;
 }
 */
+html,
+body {
+  font-size: 62.5%;
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #5a94c0;
+}
+
+.container-top-slides {
+  width: 100vw;
+  background-image: url(img/ocean.jpg);
+  height: 35vh;
+  background-size: cover;
+  -webkit-animation: slideshow 20s infinite ease-in-out;
+          animation: slideshow 20s infinite ease-in-out;
+  margin-bottom: 2rem;
+}
+
+@-webkit-keyframes slideshow {
+  25% {
+    background: url(img/reef.jpeg);
+    background-size: cover;
+  }
+  50% {
+    background: url(img/wave.jpeg);
+    background-size: cover;
+  }
+  75% {
+    background: url(img/ocean2.jpeg);
+    background-size: cover;
+  }
+  100% {
+    background: url(img/ocean.jpg);
+    background-size: cover;
+  }
+}
+
+@keyframes slideshow {
+  25% {
+    background: url(img/reef.jpeg);
+    background-size: cover;
+  }
+  50% {
+    background: url(img/wave.jpeg);
+    background-size: cover;
+  }
+  75% {
+    background: url(img/ocean2.jpeg);
+    background-size: cover;
+  }
+  100% {
+    background: url(img/ocean.jpg);
+    background-size: cover;
+  }
+}
+
+* {
+  border: 1px solid red;
+}
+
 .container {
   margin: 2rem auto;
   display: -webkit-box;
@@ -63,15 +125,15 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
+      justify-content: space-around;
   padding: 1rem;
   font-size: 1.5rem;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
   color: #fff;
   padding: 0 12rem;
@@ -80,8 +142,8 @@ body {
 /* ideas= 
 need 5 effects
 flying bird
-shifting from pictures? in a diff. slideshow
-writing fancy texts
+shifting from pictures? in a diff. slideshow yes
+writing fancy texts yes
 */
 .container-top-title {
   font-size: 4rem;
@@ -90,40 +152,29 @@ writing fancy texts
   letter-spacing: 0.5rem;
   font-weight: bold;
   -webkit-animation: 3s slide 0s forwards;
-  animation: 3s slide 0s forwards;
+          animation: 3s slide 0s forwards;
   -webkit-transform: translateX(-100%);
-  transform: translateX(-100%);
+          transform: translateX(-100%);
 }
 
 @-webkit-keyframes slide {
   to {
     -webkit-transform: translateX(0);
-    transform: translateX(0);
+            transform: translateX(0);
   }
 }
 
 @keyframes slide {
   to {
     -webkit-transform: translateX(0);
-    transform: translateX(0);
+            transform: translateX(0);
   }
-}
-
-.container-top img {
-  width: 100vw;
-  -o-object-fit: cover;
-  object-fit: cover;
-  height: 300px;
-}
-
-.text {
-  margin: 2rem;
-  font-size: 1.8rem;
 }
 
 .example-header {
   font-size: 2.5rem;
   text-transform: uppercase;
+  margin: 1rem 0;
 }
 
 .pictures {
@@ -133,12 +184,28 @@ writing fancy texts
 }
 
 .picture {
-  margin: 1rem 2rem;
-  padding: 1rem;
-  height: 30rem;
-  font-size: 1.2rem;
   background-repeat: no-repeat;
   background-size: cover;
+  font-size: 1.2rem;
+  height: 40rem;
+  margin: 1rem;
+  padding: 1rem 2rem;
+  -webkit-filter: brightness(100%);
+          filter: brightness(100%);
+}
+
+.picture:hover {
+  -webkit-filter: brightness(70%);
+          filter: brightness(70%);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.picture:hover p:not(:hover) {
+  -webkit-filter: brightness(70%);
+          filter: brightness(70%);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 .picture.one {
@@ -146,11 +213,11 @@ writing fancy texts
 }
 
 .picture.two {
-  background-image: url(img/clown-fish.jpg);
+  background-image: url(img/jellyfish.jpg);
 }
 
 .picture.three {
-  background-image: url(img/jellyfish.jpg);
+  background-image: url(img/clown-fish.jpg);
 }
 
 p {

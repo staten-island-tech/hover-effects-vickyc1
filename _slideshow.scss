@@ -1,0 +1,29 @@
+@import "_variables.scss";
+
+.container-top-slides {
+  width: 100vw;
+  background-image: url(img/ocean.jpg);
+  height: 35vh;
+  background-size: cover;
+  animation: slideshow 20s infinite ease-in-out;
+  margin-bottom: 2rem;
+}
+
+@keyframes slideshow {
+  25% {
+    background: url(img/reef.jpeg);
+    background-size: cover;
+  }
+  50% {
+    background: url(img/wave.jpeg);
+    background-size: cover;
+  }
+  75% {
+    background: url(img/ocean2.jpeg);
+    background-size: cover;
+  }
+  100% {
+    background: url(img/ocean.jpg);
+    background-size: cover;
+  }
+}
