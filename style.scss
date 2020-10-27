@@ -1,10 +1,11 @@
 @import "_variables.scss";
 @import "_btn.scss";
 @import "_slideshow.scss";
-
+/*
 * {
   border: 1px solid red;
 }
+*/
 .container {
   margin: 2rem auto;
   display: flex;
@@ -57,20 +58,32 @@ writing fancy texts yes
   height: 40rem;
   margin: 1rem;
   padding: 1rem 2rem;
-  filter: brightness(100%);
+  //filter: brightness(100%);
 }
-
+/*
 .picture:hover {
   filter: brightness(70%);
   transition: all 1s ease;
 }
 
-.picture:hover {
-  filter: brightness(70%);
-  transition: all 1s ease;
+.picture:hover:before {
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
 }
 
-.picture:hover . .picture.one {
+.picture:hover:after {
+  opacity: 1;
+}
+*/
+.picture {
+  box-shadow: inset 0 0 0 100vw rgba(0, 0, 0, 0.6);
+  transition: box-shadow 0.3s ease-out;
+}
+.picture:hover {
+  box-shadow: inset 0 0 0 100vw rgba(0, 0, 0, 0.2);
+}
+
+.picture.one {
   background-image: url(img/seal.jpg);
 }
 
