@@ -7,6 +7,8 @@
   background-size: cover;
   animation: slideshow 20s infinite ease-in-out;
   margin-bottom: 2rem;
+  position: relative;
+  z-index: 2;
 }
 
 @keyframes slideshow {

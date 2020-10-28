@@ -1,0 +1,108 @@
+.bubble {
+  background-color: #e0eaee;
+  width: 2rem;
+  border-radius: 50%;
+  position: absolute;
+  height: 2rem;
+  z-index: 1;
+  opacity: 0.35;
+}
+
+.bubble.one {
+  animation: move 10s linear infinite, side 10s ease-in-out infinite alternate;
+  transform: scale(0.9);
+  left: 2rem;
+}
+
+.bubble.two {
+  left: 20rem;
+  transform: scale(0.75);
+  animation: move 15s linear infinite, side 10s ease-in-out infinite alternate;
+}
+
+.bubble.three {
+  left: 70rem;
+  transform: scale(0.8);
+  animation: move3 5s linear infinite, side3 15s ease-in-out infinite alternate;
+}
+
+.bubble.four {
+  right: 50rem;
+  transform: scale(0.8);
+  animation: move4 15s linear infinite, side4 10s ease-in-out infinite alternate;
+}
+
+@keyframes move {
+  0% {
+    top: 500px;
+  }
+  100% {
+    top: -500px;
+  }
+}
+
+@keyframes side {
+  0% {
+    margin-left: 0rem;
+  }
+  100% {
+    margin-left: 60rem;
+  }
+}
+
+@keyframes move2 {
+  0% {
+    top: 100rem;
+  }
+  100% {
+    top: 0rem;
+  }
+}
+
+@keyframes side2 {
+  0% {
+    margin-left: 10rem;
+  }
+  100% {
+    margin-left: 4rem;
+  }
+}
+
+@keyframes move3 {
+  0% {
+    top: 100rem;
+  }
+  50% {
+    top: 50rem;
+  }
+  100% {
+    top: 0rem;
+  }
+}
+
+@keyframes side3 {
+  0% {
+    margin-right: 0rem;
+  }
+  100% {
+    margin-left: 10rem;
+  }
+}
+
+@keyframes move4 {
+  0% {
+    top: 100rem;
+  }
+  100% {
+    top: 0rem;
+  }
+}
+
+@keyframes side4 {
+  0% {
+    margin-left: 0rem;
+  }
+  100% {
+    margin-left: 60rem;
+  }
+}

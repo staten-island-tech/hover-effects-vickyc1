@@ -64,7 +64,7 @@ body {
   text-decoration: none;
   margin: 1rem;
   padding: 1rem;
-  font-size: 2.5rem;
+  font-size: 2rem;
   display: inline-block;
 }
 
@@ -128,6 +128,8 @@ body {
   -webkit-animation: slideshow 20s infinite ease-in-out;
           animation: slideshow 20s infinite ease-in-out;
   margin-bottom: 2rem;
+  position: relative;
+  z-index: 2;
 }
 
 @-webkit-keyframes slideshow {
@@ -168,11 +170,214 @@ body {
   }
 }
 
+.bubble {
+  background-color: #e0eaee;
+  width: 2rem;
+  border-radius: 50%;
+  position: absolute;
+  height: 2rem;
+  z-index: 1;
+  opacity: 0.35;
+}
+
+.bubble.one {
+  -webkit-animation: move 10s linear infinite, side 10s ease-in-out infinite alternate;
+          animation: move 10s linear infinite, side 10s ease-in-out infinite alternate;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  left: 2rem;
+}
+
+.bubble.two {
+  left: 20rem;
+  -webkit-transform: scale(0.75);
+          transform: scale(0.75);
+  -webkit-animation: move 15s linear infinite, side 10s ease-in-out infinite alternate;
+          animation: move 15s linear infinite, side 10s ease-in-out infinite alternate;
+}
+
+.bubble.three {
+  left: 70rem;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-animation: move3 5s linear infinite, side3 15s ease-in-out infinite alternate;
+          animation: move3 5s linear infinite, side3 15s ease-in-out infinite alternate;
+}
+
+.bubble.four {
+  right: 50rem;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-animation: move4 15s linear infinite, side4 10s ease-in-out infinite alternate;
+          animation: move4 15s linear infinite, side4 10s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes move {
+  0% {
+    top: 500px;
+  }
+  100% {
+    top: -500px;
+  }
+}
+
+@keyframes move {
+  0% {
+    top: 500px;
+  }
+  100% {
+    top: -500px;
+  }
+}
+
+@-webkit-keyframes side {
+  0% {
+    margin-left: 0rem;
+  }
+  100% {
+    margin-left: 60rem;
+  }
+}
+
+@keyframes side {
+  0% {
+    margin-left: 0rem;
+  }
+  100% {
+    margin-left: 60rem;
+  }
+}
+
+@-webkit-keyframes move2 {
+  0% {
+    top: 100rem;
+  }
+  100% {
+    top: 0rem;
+  }
+}
+
+@keyframes move2 {
+  0% {
+    top: 100rem;
+  }
+  100% {
+    top: 0rem;
+  }
+}
+
+@-webkit-keyframes side2 {
+  0% {
+    margin-left: 10rem;
+  }
+  100% {
+    margin-left: 4rem;
+  }
+}
+
+@keyframes side2 {
+  0% {
+    margin-left: 10rem;
+  }
+  100% {
+    margin-left: 4rem;
+  }
+}
+
+@-webkit-keyframes move3 {
+  0% {
+    top: 100rem;
+  }
+  50% {
+    top: 50rem;
+  }
+  100% {
+    top: 0rem;
+  }
+}
+
+@keyframes move3 {
+  0% {
+    top: 100rem;
+  }
+  50% {
+    top: 50rem;
+  }
+  100% {
+    top: 0rem;
+  }
+}
+
+@-webkit-keyframes side3 {
+  0% {
+    margin-right: 0rem;
+  }
+  100% {
+    margin-left: 10rem;
+  }
+}
+
+@keyframes side3 {
+  0% {
+    margin-right: 0rem;
+  }
+  100% {
+    margin-left: 10rem;
+  }
+}
+
+@-webkit-keyframes move4 {
+  0% {
+    top: 100rem;
+  }
+  100% {
+    top: 0rem;
+  }
+}
+
+@keyframes move4 {
+  0% {
+    top: 100rem;
+  }
+  100% {
+    top: 0rem;
+  }
+}
+
+@-webkit-keyframes side4 {
+  0% {
+    margin-left: 0rem;
+  }
+  100% {
+    margin-left: 60rem;
+  }
+}
+
+@keyframes side4 {
+  0% {
+    margin-left: 0rem;
+  }
+  100% {
+    margin-left: 60rem;
+  }
+}
+
 /*
 * {
   border: 1px solid red;
 }
 */
+html,
+body {
+  font-size: 62.5%;
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #5a94c0;
+  font-family: "Poppins", sans-serif;
+}
+
 .container {
   margin: 2rem auto;
   display: -webkit-box;
@@ -245,24 +450,7 @@ writing fancy texts yes
   height: 40rem;
   margin: 1rem;
   padding: 1rem 2rem;
-}
-
-/*
-.picture:hover {
-  filter: brightness(70%);
-  transition: all 1s ease;
-}
-
-.picture:hover:before {
-  background: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-}
-
-.picture:hover:after {
-  opacity: 1;
-}
-*/
-.picture {
+  z-index: 2;
   -webkit-box-shadow: inset 0 0 0 100vw rgba(0, 0, 0, 0.6);
           box-shadow: inset 0 0 0 100vw rgba(0, 0, 0, 0.6);
   -webkit-transition: -webkit-box-shadow 0.3s ease-out;
@@ -289,6 +477,6 @@ writing fancy texts yes
 }
 
 p {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 }
 /*# sourceMappingURL=style.css.map */
