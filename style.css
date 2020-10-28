@@ -1,62 +1,6 @@
-html,
-body {
-  font-size: 62.5%;
-  padding: 0;
-  margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  background-color: #5a94c0;
-}
-
-html,
-body {
-  font-size: 62.5%;
-  padding: 0;
-  margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  background-color: #5a94c0;
-}
-
-/*
 .btn,
 .btn:link,
 .btn:visited {
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 1.5rem 4rem;
-    background-color: red;
-    margin: 1rem auto;
-    font-size: 2rem;
-    border-radius: 10rem;
-    transition: all 0.3s;
-}
-.btn-red{
-    background-color: color(red);
-    color: #fff;
-}
-
-.btn:hover{
-    /* transform: scale(2);
-     making it bigger */
-/*
-    transform: translateY(-2px);
-    box-shadow: 0 10px 0.5rem rgba(color(black), 0.2)
-}
-
-.btn::after{
-    content:"";
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 10rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
-*/
-.btn {
   color: #fff;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -78,8 +22,8 @@ body {
   opacity: 0;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  border-top: 1px solid #08e2ff;
-  border-bottom: 1px solid #08e2ff;
+  border-top: 1.5px solid #08e2ff;
+  border-bottom: 1.5px solid #08e2ff;
   -webkit-transform: scale(0.5, 2);
           transform: scale(0.5, 2);
 }
@@ -108,16 +52,6 @@ body {
 
 .btn:hover:after {
   opacity: 0;
-}
-
-html,
-body {
-  font-size: 62.5%;
-  padding: 0;
-  margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  background-color: #5a94c0;
 }
 
 .container-top-slides {
@@ -362,11 +296,6 @@ body {
   }
 }
 
-/*
-* {
-  border: 1px solid red;
-}
-*/
 html,
 body {
   font-size: 62.5%;
@@ -399,12 +328,6 @@ body {
   padding: 0 12rem;
 }
 
-/* ideas= 
-need 5 effects
-flying bird
-shifting from pictures? in a diff. slideshow yes
-writing fancy texts yes
-*/
 .container-top-title {
   font-size: 4rem;
   color: #fff;
@@ -431,10 +354,16 @@ writing fancy texts yes
   }
 }
 
+.text {
+  margin: 1rem 0;
+}
+
 .example-header {
   font-size: 2.5rem;
   text-transform: uppercase;
   margin: 1rem 0;
+  padding-top: 1rem;
+  border-top: 0.1rem solid rgba(3, 41, 71, 0.548);
 }
 
 .pictures {

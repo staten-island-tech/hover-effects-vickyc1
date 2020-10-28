@@ -1,12 +1,7 @@
-@import "_variables.scss";
 @import "_btn.scss";
 @import "_slideshow.scss";
 @import "_bubble.scss";
-/*
-* {
-  border: 1px solid red;
-}
-*/
+
 html,
 body {
   font-size: 62.5%;
@@ -30,13 +25,6 @@ body {
   padding: 0 12rem;
 }
 
-/* ideas= 
-need 5 effects
-flying bird
-shifting from pictures? in a diff. slideshow yes
-writing fancy texts yes
-*/
-
 .container-top-title {
   font-size: 4rem;
   color: #fff;
@@ -46,16 +34,23 @@ writing fancy texts yes
   animation: 3s slide 0s forwards;
   transform: translateX(-100%);
 }
+
 @keyframes slide {
   to {
     transform: translateX(0);
   }
 }
 
+.text {
+  margin: 1rem 0;
+}
+
 .example-header {
   font-size: 2.5rem;
   text-transform: uppercase;
   margin: 1rem 0;
+  padding-top: 1rem;
+  border-top: 0.1rem solid rgba(3, 41, 71, 0.548);
 }
 
 .pictures {
