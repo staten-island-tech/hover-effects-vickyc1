@@ -337,6 +337,22 @@
   transition: 1s all ease;
 }
 
+.text {
+  margin: 1rem 0;
+}
+
+.material-icons {
+  font-size: 4rem !important;
+}
+
+.text-hidden {
+  display: none;
+}
+
+.icon:hover .text-hidden {
+  display: block;
+}
+
 html,
 body {
   font-size: 62.5%;
@@ -395,16 +411,36 @@ body {
   }
 }
 
-.text {
-  margin: 1rem 0;
-}
-
 .example-header {
   font-size: 2.5rem;
   text-transform: uppercase;
   margin: 1rem 0;
   padding-top: 1rem;
   border-top: 0.1rem solid rgba(3, 41, 71, 0.548);
+}
+
+.example-header:hover,
+.card-container-title:hover {
+  -webkit-animation: glow 1s infinite alternate;
+          animation: glow 1s infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #00d9ff, 0 0 40px #00d9ff, 0 0 50px #00d9ff, 0 0 60px #00d9ff, 0 0 70px #00d9ff;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #3fcbe4, 0 0 40px #3fcbe4, 0 0 50px #3fcbe4, 0 0 60px #3fcbe4, 0 0 70px #3fcbe4, 0 0 80px #3fcbe4;
+  }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #00d9ff, 0 0 40px #00d9ff, 0 0 50px #00d9ff, 0 0 60px #00d9ff, 0 0 70px #00d9ff;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #3fcbe4, 0 0 40px #3fcbe4, 0 0 50px #3fcbe4, 0 0 60px #3fcbe4, 0 0 70px #3fcbe4, 0 0 80px #3fcbe4;
+  }
 }
 
 .pictures {

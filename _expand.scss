@@ -1,0 +1,14 @@
+.text {
+  margin: 1rem 0;
+}
+//text, text-appear, text-hidden
+.material-icons {
+  font-size: 4rem !important;
+}
+
+.text-hidden {
+  display: none;
+}
+.icon:hover .text-hidden {
+  display: block;
+}
