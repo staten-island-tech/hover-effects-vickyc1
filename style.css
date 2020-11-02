@@ -427,6 +427,7 @@ body {
 .card-container-title:hover {
   -webkit-animation: glow 1s infinite alternate;
           animation: glow 1s infinite alternate;
+  letter-spacing: 1.5rem;
 }
 
 @-webkit-keyframes glow {

@@ -54,6 +54,7 @@ body {
 .example-header:hover,
 .card-container-title:hover {
   animation: glow 1s infinite alternate;
+  letter-spacing: 1.5rem;
 }
 
 @keyframes glow {
